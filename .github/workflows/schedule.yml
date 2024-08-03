@@ -1,12 +1,12 @@
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/5 * * * *'
     
 jobs:
   test_schedule:
     runs-on: ubuntu-latest
     steps:
       - name: Echo forget her and move on
-        if: github.event.schedule != '*/2 * * * *'
+        if: github.event.schedule != '*/5 * * * *'
         run: echo "Yes I will"
       
